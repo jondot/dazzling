@@ -1,0 +1,21 @@
+import React, { Component } from 'react'
+import { Shell, withAssets } from 'dazzling-components'
+import c from '../../site-config'
+
+const LandingPage = require('dazzling-components/lib/landing-page').default
+console.log('f', LandingPage)
+console.log(require('dazzling-components'))
+const config = withAssets(_ => require(`../assets/${_}`))(c)
+
+export default class Index extends Component {
+  render() {
+    return (
+      <LandingPage config={config} {...this.props}>
+        <Shell dark style={{ margin: '8rem 0 5rem 0' }}>
+          <Shell.Cmd>$ yarn add foo-bar</Shell.Cmd>
+          <Shell.Success>foo-bar installed!</Shell.Success>
+        </Shell>
+      </LandingPage>
+    )
+  }
+}

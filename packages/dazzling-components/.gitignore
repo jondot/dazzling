@@ -1,0 +1,8 @@
+node_modules/
+.vscode/
+.idea/
+flow-typed/
+storybook-static/
+*.log
+.tool-versions
+

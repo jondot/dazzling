@@ -1,0 +1,8 @@
+language: node_js
+cache: yarn
+node_js:
+  - "9"
+
+script: 
+- cd dazzling-components && yarn && yarn build
+- cd dazzling-core && yarn && yarn test

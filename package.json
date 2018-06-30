@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "packages/dazzling-core/_templates/site/new/contents/www"
+    ],
+    "nohoist": [
+      "gatsby",
+      "**/gatsby",
+      "**/gatsby/**",
+      "**/gatsby-*"
+    ]
+  },
+  "devDependencies": {
+    "lerna": "^2.11.0"
+  }
+}

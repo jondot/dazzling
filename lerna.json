@@ -1,0 +1,10 @@
+{
+  "lerna": "2.11.0",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "packages": [
+    "packages/*",
+    "packages/dazzling-core/_templates/site/new/contents/www"
+  ],
+  "version": "1.0.4"
+}

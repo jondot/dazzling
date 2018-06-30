@@ -1,0 +1,1 @@
+- assets - generate assets from sketchfile including favicon (which is really png)
