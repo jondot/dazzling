@@ -6,5 +6,5 @@
     "packages/*",
     "packages/dazzling-core/_templates/site/new/contents/www"
   ],
-  "version": "1.0.5"
+  "version": "1.0.6"
 }
