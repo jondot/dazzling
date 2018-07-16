@@ -25,6 +25,13 @@ const Subtitle = styled.h2`
 `
 const maybeLink = (link, Content) => {
   if (link) {
+    if (link.startsWith('http')) {
+      return (
+        <a href={link}>
+          <Content />
+        </a>
+      )
+    }
     return (
       <Link to={link}>
         <Content />
@@ -33,6 +40,7 @@ const maybeLink = (link, Content) => {
   }
   return <Content />
 }
+
 export default ({ features }) => (
   <TripletContainer>
     {features.map(({ image, title, content, link, topTitle, width }) => (

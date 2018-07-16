@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { Hero, Navigation, Footer, Triplet, Section } from './index'
 
-console.log('', { Hero, Navigation, Footer, Triplet, Section })
 export default class LandingPage extends React.Component {
   render() {
     const { config } = this.props
@@ -15,6 +14,7 @@ export default class LandingPage extends React.Component {
             <Navigation items={config.nav} />
             <Hero
               title={config.siteTitle}
+              subTitle={config.pitch}
               logo={config.logo}
               primaryNavItem={config.nav.find(item => item.primary)}
               secondaryNavItem={config.nav.find(item => item.secondary)}

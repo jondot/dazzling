@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components'
 class LayoutPage extends Component {
   render() {
     const { children, config, theme } = this.props
-    console.log(children())
     return (
       <div>
         <Helmet>

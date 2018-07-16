@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import Subtitle from './subtitle'
-import Or from './or'
-import BrandedLink from './branded-link'
-import Button from './button'
+import Subtitle from '../subtitle'
+import Or from '../or'
+import BrandedLink from '../branded-link'
+import Button from '../button'
 
 const Hero = ({
   title,
@@ -34,7 +34,7 @@ const HeroContainer = styled.div`
   & > h1 {
     font-weight: 300;
     font-size: 3.2rem;
-    color: #f722b1;
+    color: ${({ theme: { brand } }) => brand};
     margin: 0;
   }
 `

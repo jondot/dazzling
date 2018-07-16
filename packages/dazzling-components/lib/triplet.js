@@ -40,6 +40,12 @@ const Subtitle = _styledComponents.default.h2`
 
 const maybeLink = (link, Content) => {
   if (link) {
+    if (link.startsWith('http')) {
+      return _react.default.createElement("a", {
+        href: link
+      }, _react.default.createElement(Content, null));
+    }
+
     return _react.default.createElement(_gatsbyLink.default, {
       to: link
     }, _react.default.createElement(Content, null));

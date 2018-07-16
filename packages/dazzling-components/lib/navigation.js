@@ -17,14 +17,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 class Navigation extends _react.default.Component {
   render() {
-    return _react.default.createElement(NavContainer, null, _react.default.createElement("section", null, this.props.items.map(({
+    const _this$props = this.props,
+          style = _this$props.style,
+          itemStyle = _this$props.itemStyle;
+    return _react.default.createElement(NavContainer, {
+      style: style
+    }, _react.default.createElement("section", null, this.props.items.map(({
       name,
       to,
       href
     }) => to ? _react.default.createElement(_gatsbyLink.default, {
+      style: itemStyle,
       className: "nav-link",
       to: to
     }, name) : _react.default.createElement("a", {
+      style: itemStyle,
       className: "nav-link",
       href: href
     }, name)), this.props.docSearch && _react.default.createElement(_search.default, {

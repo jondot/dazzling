@@ -3,8 +3,7 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "packages": [
-    "packages/*",
-    "packages/dazzling-core/_templates/site/new/contents/www"
+    "packages/*"
   ],
   "version": "1.0.6"
 }

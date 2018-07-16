@@ -4,10 +4,10 @@ import styled from 'styled-components'
 
 class Button extends Component {
   render() {
-    const { children, to } = this.props
+    const { children, to, style } = this.props
     return (
       <Link style={{ border: 'none' }} to={to}>
-        <ButtonContainer>{children}</ButtonContainer>
+        <ButtonContainer style={style}>{children}</ButtonContainer>
       </Link>
     )
   }

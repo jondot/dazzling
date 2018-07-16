@@ -3,8 +3,6 @@ import { Shell, withAssets } from 'dazzling-components'
 import c from '../../site-config'
 
 const LandingPage = require('dazzling-components/lib/landing-page').default
-console.log('f', LandingPage)
-console.log(require('dazzling-components'))
 const config = withAssets(_ => require(`../assets/${_}`))(c)
 
 export default class Index extends Component {

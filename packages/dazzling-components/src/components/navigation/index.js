@@ -1,24 +1,29 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import DocSearch from './docs/search'
+import DocSearch from '../../docs/search'
+
+
+
+
 
 class Navigation extends React.Component {
   render() {
+    const { style, itemStyle } = this.props
     return (
-      <NavContainer>
+      <NavContainer style={style}>
         <section>
           {this.props.items.map(
             ({ name, to, href }) =>
               to ? (
-                <Link className="nav-link" to={to}>
+                <Link style={itemStyle} className="nav-link" to={to}>
                   {name}
                 </Link>
               ) : (
-                <a className="nav-link" href={href}>
-                  {name}
-                </a>
-              )
+                  <a style={itemStyle} className="nav-link" href={href}>
+                    {name}
+                  </a>
+                )
           )}
           {this.props.docSearch && (
             <DocSearch docSearch={this.props.docSearch} />

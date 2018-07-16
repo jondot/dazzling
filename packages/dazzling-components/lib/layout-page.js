@@ -21,7 +21,6 @@ class LayoutPage extends _react.Component {
           children = _this$props.children,
           config = _this$props.config,
           theme = _this$props.theme;
-    console.log(children());
     return _react.default.createElement("div", null, _react.default.createElement(_reactHelmet.default, null, _react.default.createElement("title", null, config.siteTitle), _react.default.createElement("meta", {
       name: "description",
       content: config.siteDescription

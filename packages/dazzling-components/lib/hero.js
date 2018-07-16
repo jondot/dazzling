@@ -42,7 +42,11 @@ const HeroContainer = _styledComponents.default.div`
   & > h1 {
     font-weight: 300;
     font-size: 3.2rem;
-    color: #f722b1;
+    color: ${({
+  theme: {
+    brand
+  }
+}) => brand};
     margin: 0;
   }
 `;

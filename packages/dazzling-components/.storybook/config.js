@@ -21,12 +21,12 @@ setDefaults({
 })
 
 // automatically import all files ending in *.stories.js
-const components = require.context('../src/components', true, /.stories.js$/)
 function loadComponents() {
+  const components = require.context('../src', true, /.stories.js$/)
   components.keys().forEach(filename => components(filename))
 }
-const dist = require.context('../stories', true, /.stories.js$/)
 function loadStories() {
+  const dist = require.context('../stories', true, /.stories.js$/)
   dist.keys().forEach(filename => dist(filename))
 }
 

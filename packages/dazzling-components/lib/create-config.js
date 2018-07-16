@@ -13,9 +13,11 @@ module.exports = ({
   usedInText,
   usedIn,
   features,
+  featuresText,
   copyright,
   sections,
-  theme
+  theme,
+  googleFonts
 }) => ({
   pitch,
   name,
@@ -34,12 +36,13 @@ module.exports = ({
   siteDescription: `${name} - ${pitch}`,
   // Website description used for RSS feeds/meta description tag.
   googleAnalyticsID,
-  googleFonts: ['Source Sans Pro:300,400,700'],
+  googleFonts: googleFonts || ['Source Sans Pro:300,400,700'],
   docSearch,
   nav,
   usedInText,
   usedIn,
   features,
+  featuresText,
   copyright,
   // TODO: Move this literally anywhere better.
   toCSections: ['', ...sections],

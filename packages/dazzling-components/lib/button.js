@@ -19,13 +19,16 @@ class Button extends _react.Component {
   render() {
     const _this$props = this.props,
           children = _this$props.children,
-          to = _this$props.to;
+          to = _this$props.to,
+          style = _this$props.style;
     return _react.default.createElement(_gatsbyLink.default, {
       style: {
         border: 'none'
       },
       to: to
-    }, _react.default.createElement(ButtonContainer, null, children));
+    }, _react.default.createElement(ButtonContainer, {
+      style: style
+    }, children));
   }
 
 }

@@ -11,9 +11,11 @@ module.exports = ({
   usedInText,
   usedIn,
   features,
+  featuresText,
   copyright,
   sections,
-  theme
+  theme,
+  googleFonts
 }) => ({
   pitch,
   name,
@@ -27,12 +29,13 @@ module.exports = ({
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: `${name} - ${pitch}`, // Website description used for RSS feeds/meta description tag.
   googleAnalyticsID,
-  googleFonts: ['Source Sans Pro:300,400,700'],
+  googleFonts: googleFonts || ['Source Sans Pro:300,400,700'],
   docSearch,
   nav,
   usedInText,
   usedIn,
   features,
+  featuresText,
   copyright,
   // TODO: Move this literally anywhere better.
   toCSections: ['', ...sections], // Used to generate the Table Of Contents. Index 0 should be blank.

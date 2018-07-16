@@ -15,14 +15,6 @@ var _index = require("./index");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log('', {
-  Hero: _index.Hero,
-  Navigation: _index.Navigation,
-  Footer: _index.Footer,
-  Triplet: _index.Triplet,
-  Section: _index.Section
-});
-
 class LandingPage extends _react.default.Component {
   render() {
     const config = this.props.config;
@@ -34,6 +26,7 @@ class LandingPage extends _react.default.Component {
       items: config.nav
     }), _react.default.createElement(_index.Hero, {
       title: config.siteTitle,
+      subTitle: config.pitch,
       logo: config.logo,
       primaryNavItem: config.nav.find(item => item.primary),
       secondaryNavItem: config.nav.find(item => item.secondary)
