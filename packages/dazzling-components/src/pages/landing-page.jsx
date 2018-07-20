@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import { Hero, Navigation, Footer, Triplet, Section } from './index'
+import { Hero, Navigation, Footer, Triplet, Section } from '../index'
 
 export default class LandingPage extends React.Component {
   render() {

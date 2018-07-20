@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Navigation from '../navigation'
+import Navigation from '../components/navigation'
 
 class MainHeader extends React.Component {
   render() {

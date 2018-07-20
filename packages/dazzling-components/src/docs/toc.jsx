@@ -36,34 +36,28 @@ class TableOfContents extends React.Component {
 
   nodeListItems() {
     const postNodeSections = this.buildNodes()
-    const listItems = []
     const sectionTitles = this.props.sectionTitles
-    console.log('sections', postNodeSections)
-    postNodeSections.forEach((section, idx) => {
-      const sectionDocs = []
-      section.forEach(node => {
-        sectionDocs.push(
-          <DocContainer>
-            <Link to={node.path}>
-              <OffsetLi
-                selected={
-                  this.props.location &&
-                  node.path === this.props.location.pathname
-                }
-              >
-                <h6>{node.title}</h6>
-              </OffsetLi>
-            </Link>
-          </DocContainer>
-        )
-      })
-      listItems.push(
-        <li className="section">
-          <h5 className="tocHeading docSearch-lvl0">{sectionTitles[idx]}</h5>
-          <ul className="sectionItems">{sectionDocs}</ul>
-        </li>
-      )
-    })
+    const listItems = postNodeSections.map((section, idx) => (
+      <li key={idx} className="section">
+        <h5 className="tocHeading docSearch-lvl0">{sectionTitles[idx]}</h5>
+        <ul className="sectionItems">
+          {section.map(node => (
+            <DocContainer key={node.path}>
+              <Link to={node.path}>
+                <OffsetLi
+                  selected={
+                    this.props.location &&
+                    node.path === this.props.location.pathname
+                  }
+                >
+                  <h6>{node.title}</h6>
+                </OffsetLi>
+              </Link>
+            </DocContainer>
+          ))}
+        </ul>
+      </li>
+    ))
     return listItems
   }
 

@@ -45,26 +45,21 @@ class TableOfContents extends _react.default.Component {
 
   nodeListItems() {
     const postNodeSections = this.buildNodes();
-    const listItems = [];
     const sectionTitles = this.props.sectionTitles;
-    console.log('sections', postNodeSections);
-    postNodeSections.forEach((section, idx) => {
-      const sectionDocs = [];
-      section.forEach(node => {
-        sectionDocs.push(_react.default.createElement(DocContainer, null, _react.default.createElement(_gatsbyLink.default, {
-          to: node.path
-        }, _react.default.createElement(OffsetLi, {
-          selected: this.props.location && node.path === this.props.location.pathname
-        }, _react.default.createElement("h6", null, node.title)))));
-      });
-      listItems.push(_react.default.createElement("li", {
-        className: "section"
-      }, _react.default.createElement("h5", {
-        className: "tocHeading docSearch-lvl0"
-      }, sectionTitles[idx]), _react.default.createElement("ul", {
-        className: "sectionItems"
-      }, sectionDocs)));
-    });
+    const listItems = postNodeSections.map((section, idx) => _react.default.createElement("li", {
+      key: idx,
+      className: "section"
+    }, _react.default.createElement("h5", {
+      className: "tocHeading docSearch-lvl0"
+    }, sectionTitles[idx]), _react.default.createElement("ul", {
+      className: "sectionItems"
+    }, section.map(node => _react.default.createElement(DocContainer, {
+      key: node.path
+    }, _react.default.createElement(_gatsbyLink.default, {
+      to: node.path
+    }, _react.default.createElement(OffsetLi, {
+      selected: this.props.location && node.path === this.props.location.pathname
+    }, _react.default.createElement("h6", null, node.title))))))));
     return listItems;
   }
 

@@ -71,7 +71,7 @@ export default class Index extends React.Component {
                 <Triplet features={config.usedIn} />
               </Section>
             )}
-            <Footer nav={config.nav} name={config.name} />
+            <Footer theme={{ background: '#555', ink: '#fff' }} nav={config.nav} name={config.name} />
 
           </BodyContainer>
         </main>

@@ -11,7 +11,7 @@ var _gatsbyLink = _interopRequireDefault(require("gatsby-link"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _search = _interopRequireDefault(require("./docs/search"));
+var _search = _interopRequireDefault(require("../../docs/search"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27,10 +27,12 @@ class Navigation extends _react.default.Component {
       to,
       href
     }) => to ? _react.default.createElement(_gatsbyLink.default, {
+      key: to,
       style: itemStyle,
       className: "nav-link",
       to: to
     }, name) : _react.default.createElement("a", {
+      key: href,
       style: itemStyle,
       className: "nav-link",
       href: href
@@ -49,6 +51,7 @@ const NavContainer = _styledComponents.default.div`
   .nav-link {
     font-size: 1.6rem;
     margin-right: 10px;
+    line-height: 3.2rem;
     color: ${props => props.theme.ink};
   }
   section {

@@ -42,8 +42,8 @@ const Failure = _styledComponents.default.div`
   color: magenta;
 `;
 const Content = _styledComponents.default.div`
-flex:1;
-overflow:scroll;
+  flex: 1;
+  overflow: scroll;
 `;
 
 const FauxChrome = () => _react.default.createElement(Bar, null, _react.default.createElement(Button, {
@@ -56,7 +56,7 @@ const FauxChrome = () => _react.default.createElement(Bar, null, _react.default.
 
 
 const FauxWindow = _styledComponents.default.pre`
-  display:flex;
+  display: flex;
   flex-direction: column;
   font-family: Monaco, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', monospace;
@@ -65,9 +65,9 @@ const FauxWindow = _styledComponents.default.pre`
   padding: 1rem;
   box-shadow: 0 2px 6px 0 #eff5fa;
   border-radius: 6px;
-  max-width: 500px;
+  max-width: 600px;
   overflow: auto;
-  height: 200px;
+  height: 320px;
   font-size: 14px;
   line-height: 1.375;
   direction: ltr;

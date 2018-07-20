@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _navigation = _interopRequireDefault(require("../navigation"));
+var _navigation = _interopRequireDefault(require("../components/navigation"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

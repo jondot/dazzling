@@ -13,7 +13,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _gatsbyLink = _interopRequireDefault(require("gatsby-link"));
 
-var _index = require("./index");
+var _index = require("../index");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -136,7 +136,16 @@ const LogoHeader = _styledComponents.default.div`
   }
   span {
     font-weight: 200;
-    color: #f722b1;
+    color: ${({
+  theme: {
+    brand
+  }
+}) => brand};
+    font-family: ${({
+  theme: {
+    titleFontFamily
+  }
+}) => titleFontFamily};
   }
 `;
 const SiteHeaderWrapper = _styledComponents.default.div`

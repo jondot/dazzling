@@ -15,7 +15,7 @@ td {
 }
 
 html {
-  font-size: 12px;
+  font-size: 10px;
   color: #3a5975;
   font-weight: 400;
 }
@@ -31,7 +31,7 @@ p,
 a,
 li,
 ul {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
 }
 
 h1,
@@ -157,7 +157,6 @@ code {
 }
 pre[class*='language-'] {
   font-family: Monaco, 'Lucida Console', monospace;
-  background: #fff;
   border: 1px solid #dae4ed;
   padding: 2rem;
   box-shadow: 0 2px 6px 0 #eff5fa;

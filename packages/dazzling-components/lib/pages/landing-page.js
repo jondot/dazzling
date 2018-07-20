@@ -11,7 +11,7 @@ var _reactHelmet = _interopRequireDefault(require("react-helmet"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _index = require("./index");
+var _index = require("../index");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

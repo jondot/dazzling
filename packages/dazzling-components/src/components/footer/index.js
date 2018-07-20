@@ -1,19 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
+import { transparentize } from 'polished'
 
 class Footer extends React.Component {
   render() {
+    const { theme, nav, name } = this.props
     return (
-      <Container>
-        <Hero>{this.props.name}</Hero>
-        <Links>
-          {this.props.nav.map(
+      <Container {...this.props}>
+        <Hero>{name}</Hero>
+        <Links theme={theme}>
+          {nav.map(
             ({ name, to, href }) =>
               to ? (
-                <FooterLink to={to}>{name}</FooterLink>
+                <FooterLink theme={theme} to={to}>
+                  {name}
+                </FooterLink>
               ) : (
-                <FooterHref href={href}>{name}</FooterHref>
+                <FooterHref theme={theme} href={href}>
+                  {name}
+                </FooterHref>
               )
           )}
         </Links>
@@ -32,14 +38,15 @@ const Container = styled.section`
 const Hero = styled.div`
   flex: 0.5;
   text-align: right;
-  padding: 1rem;
+  padding: 1rem 3rem;
   font-weight: 300;
 `
 const Links = styled.div`
   flex: 0.5;
   text-align: left;
-  padding: 1rem;
-  border-left: ${({ theme: { background } }) => `1px solid ${background}`};
+  padding: 1rem 3rem;
+  border-left: ${({ theme: { background } }) =>
+    `1px solid ${transparentize(0.8, background)}`};
 `
 const FooterLink = styled(Link)`
   &,

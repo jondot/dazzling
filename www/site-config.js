@@ -81,6 +81,7 @@ module.exports = createConfig({
   copyright: 'Copyright © 2018. Dotan Nahum',
   theme: {
     // named colors:
+    titleFontFamily: 'Muli',
     background: '#fff',
     brand: '#408AFA',
     brandSecondary: '#8b8f94',

@@ -112,27 +112,27 @@ Object.defineProperty(exports, "withAssets", {
   }
 });
 
-var _hero = _interopRequireDefault(require("./hero"));
+var _hero = _interopRequireDefault(require("./components/hero"));
 
-var _footer = _interopRequireDefault(require("./footer"));
+var _footer = _interopRequireDefault(require("./components/footer"));
 
-var _brandedLink = _interopRequireDefault(require("./branded-link"));
+var _brandedLink = _interopRequireDefault(require("./components/branded-link"));
 
-var _button = _interopRequireDefault(require("./button"));
+var _button = _interopRequireDefault(require("./components/button"));
 
-var _navigation = _interopRequireDefault(require("./navigation"));
+var _navigation = _interopRequireDefault(require("./components/navigation"));
 
-var _or = _interopRequireDefault(require("./or"));
+var _or = _interopRequireDefault(require("./components/or"));
 
-var _section = _interopRequireDefault(require("./section"));
+var _section = _interopRequireDefault(require("./components/section"));
 
-var _seo = _interopRequireDefault(require("./seo"));
+var _seo = _interopRequireDefault(require("./components/seo"));
 
-var _shell = _interopRequireDefault(require("./shell"));
+var _shell = _interopRequireDefault(require("./components/shell"));
 
-var _subtitle = _interopRequireDefault(require("./subtitle"));
+var _subtitle = _interopRequireDefault(require("./components/subtitle"));
 
-var _triplet = _interopRequireDefault(require("./triplet"));
+var _triplet = _interopRequireDefault(require("./components/triplet"));
 
 var _header = _interopRequireDefault(require("./docs/header"));
 
@@ -140,11 +140,11 @@ var _toc = _interopRequireDefault(require("./docs/toc"));
 
 var _search = _interopRequireDefault(require("./docs/search"));
 
-var _landingPage = _interopRequireDefault(require("./landing-page"));
+var _landingPage = _interopRequireDefault(require("./pages/landing-page"));
 
-var _docPage = _interopRequireDefault(require("./doc-page"));
+var _docPage = _interopRequireDefault(require("./pages/doc-page"));
 
-var _layoutPage = _interopRequireDefault(require("./layout-page"));
+var _layoutPage = _interopRequireDefault(require("./pages/layout-page"));
 
 var _withAssets2 = _interopRequireDefault(require("./with-assets"));
 

@@ -24,8 +24,8 @@ const Failure = styled.div`
   color: magenta;
 `
 const Content = styled.div`
-flex:1;
-overflow:scroll;
+  flex: 1;
+  overflow: scroll;
 `
 const FauxChrome = () => (
   <Bar>
@@ -37,7 +37,7 @@ const FauxChrome = () => (
 
 // we can't wait for prism to initialize, so we're inlining styles here
 const FauxWindow = styled.pre`
-  display:flex;
+  display: flex;
   flex-direction: column;
   font-family: Monaco, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', monospace;
@@ -46,9 +46,9 @@ const FauxWindow = styled.pre`
   padding: 1rem;
   box-shadow: 0 2px 6px 0 #eff5fa;
   border-radius: 6px;
-  max-width: 500px;
+  max-width: 600px;
   overflow: auto;
-  height: 200px;
+  height: 320px;
   font-size: 14px;
   line-height: 1.375;
   direction: ltr;
@@ -59,26 +59,19 @@ class Shell extends Component {
   state = {}
 
   render() {
-    const darkStyle =
-      this.props.dark
-        ? {
+    const darkStyle = this.props.dark
+      ? {
           border: 'none',
           boxShadow: '0 2px 6px 0 #989898',
           backgroundColor: '#313131',
           color: '#fefefe'
         }
-        : {}
+      : {}
     return (
-      <FauxWindow
-        style={
-          { ...darkStyle, ...(this.props.style || {}) }
-        }
-      >
+      <FauxWindow style={{ ...darkStyle, ...(this.props.style || {}) }}>
         <FauxChrome />
-        <Content>
-          {this.props.children}
-        </Content>
-      </FauxWindow >
+        <Content>{this.props.children}</Content>
+      </FauxWindow>
     )
   }
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import { SEO, DocsHeader, DocsTableOfContents } from './index'
+import { SEO, DocsHeader, DocsTableOfContents } from '../index'
 
 export default class DocPage extends React.Component {
   render() {
@@ -137,7 +137,8 @@ const LogoHeader = styled.div`
   }
   span {
     font-weight: 200;
-    color: #f722b1;
+    color: ${({ theme: { brand } }) => brand};
+    font-family: ${({ theme: { titleFontFamily } }) => titleFontFamily};
   }
 `
 const SiteHeaderWrapper = styled.div`

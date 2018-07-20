@@ -9,13 +9,13 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _subtitle = _interopRequireDefault(require("./subtitle"));
+var _subtitle = _interopRequireDefault(require("../subtitle"));
 
-var _or = _interopRequireDefault(require("./or"));
+var _or = _interopRequireDefault(require("../or"));
 
-var _brandedLink = _interopRequireDefault(require("./branded-link"));
+var _brandedLink = _interopRequireDefault(require("../branded-link"));
 
-var _button = _interopRequireDefault(require("./button"));
+var _button = _interopRequireDefault(require("../button"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

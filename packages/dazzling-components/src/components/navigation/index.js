@@ -3,10 +3,6 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import DocSearch from '../../docs/search'
 
-
-
-
-
 class Navigation extends React.Component {
   render() {
     const { style, itemStyle } = this.props
@@ -16,14 +12,19 @@ class Navigation extends React.Component {
           {this.props.items.map(
             ({ name, to, href }) =>
               to ? (
-                <Link style={itemStyle} className="nav-link" to={to}>
+                <Link key={to} style={itemStyle} className="nav-link" to={to}>
                   {name}
                 </Link>
               ) : (
-                  <a style={itemStyle} className="nav-link" href={href}>
-                    {name}
-                  </a>
-                )
+                <a
+                  key={href}
+                  style={itemStyle}
+                  className="nav-link"
+                  href={href}
+                >
+                  {name}
+                </a>
+              )
           )}
           {this.props.docSearch && (
             <DocSearch docSearch={this.props.docSearch} />
@@ -42,6 +43,7 @@ const NavContainer = styled.div`
   .nav-link {
     font-size: 1.6rem;
     margin-right: 10px;
+    line-height: 3.2rem;
     color: ${props => props.theme.ink};
   }
   section {
