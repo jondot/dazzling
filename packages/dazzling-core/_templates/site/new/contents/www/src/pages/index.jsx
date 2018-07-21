@@ -8,7 +8,7 @@ export default class Index extends Component {
   render() {
     return (
       <LandingPage config={config} {...this.props}>
-        <Shell dark style={{ margin: '8rem 0 5rem 0' }}>
+        <Shell dark style={{ margin: '8rem auto 5rem auto' }}>
           <Shell.Cmd>$ yarn add foo-bar</Shell.Cmd>
           <Shell.Success>foo-bar installed!</Shell.Success>
         </Shell>
