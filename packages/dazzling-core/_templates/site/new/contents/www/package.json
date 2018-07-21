@@ -42,14 +42,10 @@
         "@babel/preset-env": "^7.0.0-beta.49",
         "cli-glob": "^0.1.0",
         "gh-pages": "^1.0.0",
-        "goddamn-javascript-config": "1",
-        "serve": "^6.4.9",
-        "sketch-tool": "^1.0.12"
+        "serve": "^6.4.9"
     },
     "scripts": {
         "start": "gatsby develop",
-        "dev": "npm run develop",
-        "serve": "gatsby serve",
         "build": "rm -rf build && gatsby build",
         "build:pp": "rm -rf build && gatsby build --prefix-paths",
         "build:gh": "npm run clean && npm run build:pp && gh-pages -d public",

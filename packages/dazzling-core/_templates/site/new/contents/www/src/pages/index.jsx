@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { Shell, withAssets } from 'dazzling-components'
+import { LandingPage, Shell, withAssets } from 'dazzling-components'
 import c from '../../site-config'
 
-const LandingPage = require('dazzling-components/lib/landing-page').default
 const config = withAssets(_ => require(`../assets/${_}`))(c)
 
 export default class Index extends Component {

@@ -47,7 +47,7 @@ var _default = Button;
 exports.default = _default;
 const ButtonContainer = _styledComponents.default.div`
   border: 1px solid ${props => props.theme.brand};
-  border-radius: 30px;
+  border-radius: 4px;
   padding: 8px 20px;
   margin: 1rem 0;
   font-size: 2rem;
