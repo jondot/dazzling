@@ -2,8 +2,16 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import DocSearch from '../../docs/search'
+import P from 'prop-types'
 
 class Navigation extends React.Component {
+  static propTypes = {
+    items: P.arrayOf(P.object),
+    docSearch: P.object,
+    style: P.object,
+    itemStyle: P.object
+  }
+
   render() {
     const { style, itemStyle } = this.props
     return (

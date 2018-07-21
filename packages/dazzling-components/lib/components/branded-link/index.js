@@ -10,6 +10,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const BrandedLink = _styledComponents.default.a`
+  font-size: 1.6rem;
   color: ${({
   theme: {
     brand

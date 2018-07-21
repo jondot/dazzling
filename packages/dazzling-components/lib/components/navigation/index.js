@@ -13,7 +13,11 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _search = _interopRequireDefault(require("../../docs/search"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 class Navigation extends _react.default.Component {
   render() {
@@ -42,6 +46,13 @@ class Navigation extends _react.default.Component {
   }
 
 }
+
+_defineProperty(Navigation, "propTypes", {
+  items: _propTypes.default.arrayOf(_propTypes.default.object),
+  docSearch: _propTypes.default.object,
+  style: _propTypes.default.object,
+  itemStyle: _propTypes.default.object
+});
 
 const NavContainer = _styledComponents.default.div`
   display: flex;

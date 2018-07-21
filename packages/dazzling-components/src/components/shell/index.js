@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import P from 'prop-types'
 
 const Button = styled.div`
   border-radius: 5px;
@@ -56,6 +57,12 @@ const FauxWindow = styled.pre`
 `
 
 class Shell extends Component {
+  static propTypes = {
+    dark: P.bool,
+    children: P.node,
+    style: P.object
+  }
+
   state = {}
 
   render() {

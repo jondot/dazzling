@@ -8,6 +8,7 @@
   "keywords": [],
   "scripts": {
     "start": "start-storybook -p 6006",
+    "styleguide": "styleguidist server",
     "watch": "node node_modules/.bin/jest --watch",
     "test": "yarn test:code && yarn test:storyshots",
     "build": "yarn build:lib",

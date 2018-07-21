@@ -1,7 +1,21 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
+import P from 'prop-types'
 
 class SEO extends Component {
+  static propTypes = {
+    postNode: P.string,
+    postPath: P.string,
+    postSEO: P.string,
+    siteTitle: P.string,
+    siteTitleAlt: P.string,
+    siteUrl: P.string,
+    pathPrefix: P.string,
+    siteDescription: P.string,
+    siteFBAppID: P.string,
+    userTwitter: P.string,
+    siteLog: P.string
+  }
   render() {
     const {
       postNode,

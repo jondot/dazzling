@@ -2,8 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 import { transparentize } from 'polished'
+import P from 'prop-types'
 
 class Footer extends React.Component {
+  static propTypes = {
+    name: P.string,
+    nav: P.arrayOf(P.object),
+    style: P.object,
+    theme: P.object
+  }
   render() {
     const { theme, nav, name } = this.props
     return (
@@ -13,11 +20,11 @@ class Footer extends React.Component {
           {nav.map(
             ({ name, to, href }) =>
               to ? (
-                <FooterLink theme={theme} to={to}>
+                <FooterLink key={to} theme={theme} to={to}>
                   {name}
                 </FooterLink>
               ) : (
-                <FooterHref theme={theme} href={href}>
+                <FooterHref key={href} theme={theme} href={href}>
                   {name}
                 </FooterHref>
               )

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
+import P from 'prop-types'
 
 const Feature = styled.div`
   flex: 0.333333;
@@ -11,6 +12,7 @@ const TripletContainer = styled.div`
   margin: 0 auto;
   display: flex;
   max-width: 1100px;
+  font-size: 1.6rem;
   h2 {
   }
   @media screen and (max-width: 600px) {
@@ -41,10 +43,10 @@ const maybeLink = (link, Content) => {
   return <Content />
 }
 
-export default ({ features }) => (
+const Triplet = ({ features }) => (
   <TripletContainer>
-    {features.map(({ image, title, content, link, topTitle, width }) => (
-      <Feature>
+    {features.map(({ image, title, content, link, topTitle, width }, idx) => (
+      <Feature key={idx}>
         {maybeLink(link, () => (
           <div>
             {topTitle && <Subtitle>{title}</Subtitle>}
@@ -57,3 +59,9 @@ export default ({ features }) => (
     ))}
   </TripletContainer>
 )
+
+Triplet.propTypes = {
+  features: P.arrayOf(P.object)
+}
+
+export default Triplet

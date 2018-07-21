@@ -25,8 +25,8 @@ module.exports = createConfig({
     },
     {
       name: 'Docs',
-      to: 'quick-start',
-      primary: 'Quick Start'
+      to: 'getting-started',
+      primary: 'Get Started'
     },
     { name: 'Github', secondary: 'Github', href: github }
   ],

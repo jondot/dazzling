@@ -13,7 +13,11 @@ var _gatsbyLink = _interopRequireDefault(require("gatsby-link"));
 
 var _polished = require("polished");
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 class Footer extends _react.default.Component {
   render() {
@@ -28,15 +32,24 @@ class Footer extends _react.default.Component {
       to,
       href
     }) => to ? _react.default.createElement(FooterLink, {
+      key: to,
       theme: theme,
       to: to
     }, name) : _react.default.createElement(FooterHref, {
+      key: href,
       theme: theme,
       href: href
     }, name))));
   }
 
 }
+
+_defineProperty(Footer, "propTypes", {
+  name: _propTypes.default.string,
+  nav: _propTypes.default.arrayOf(_propTypes.default.object),
+  style: _propTypes.default.object,
+  theme: _propTypes.default.object
+});
 
 const Container = _styledComponents.default.section`
   background: ${({

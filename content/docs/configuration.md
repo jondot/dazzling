@@ -1,3 +1,18 @@
+---
+title: Configuration
+doc: 2
+section: 1
+category: "tech"
+type: "doc"
+---
+
+Dazzling places your website configuration in `site-config.js`. This is where you personalize all asprects of the Dazzling website, without taking advantage of building new features in React (we'll get to that!).
+
+In other words, if you want something quick, you can edit `site-config.js` and be done with it.
+
+Here it is, with some extra content abbreviated:
+
+```js
 const createConfig = require('dazzling-components/lib/create-config')
 const github = 'https://github.com/jondot/dazzling'
 
@@ -23,15 +38,10 @@ module.exports = createConfig({
 
   nav: [
     {
-      name: 'Home',
-      to: '/'
-    },
-    {
       name: 'Docs',
       to: 'getting-started',
       primary: 'Get Started'
     },
-    { name: 'Github', secondary: 'Github', href: github }
   ],
   usedInText: 'Powered by Dazzling',
   usedIn: [
@@ -51,18 +61,6 @@ module.exports = createConfig({
       content:
         'Build with Dazzling components or make new ones with React and Styled Components.'
     },
-    {
-      image: 'scalable.svg',
-      title: 'Full Automation.',
-      content:
-        'Generate, install, and go. Even exports your logo from the included Sketch file.'
-    },
-    {
-      image: 'fast.svg',
-      title: 'Gatsby at the Core.',
-      content:
-        'Dazzling grows with you. Use anything from the amazing Gatsby ecosystem.'
-    }
   ],
   copyright: 'Copyright © 2018. Dotan Nahum',
   theme: {
@@ -80,3 +78,8 @@ module.exports = createConfig({
     sitePadding: '20px'
   }
 })
+```
+
+We recommend experimenting with these settings and if any doubt, take a look [at the source]()
+
+The next step for customizing your website would be to [take advantage of React and Gatsby](react).

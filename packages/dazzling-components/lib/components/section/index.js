@@ -27,6 +27,7 @@ const SectionContainer = _styledComponents.default.section`
   padding: 4rem 0;
   padding-bottom: 6rem;
   text-align: center;
+  font-size: 1.6rem;
 `;
 var _default = Section;
 exports.default = _default;

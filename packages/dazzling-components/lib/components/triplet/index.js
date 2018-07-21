@@ -11,6 +11,8 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _gatsbyLink = _interopRequireDefault(require("gatsby-link"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Feature = _styledComponents.default.div`
@@ -22,6 +24,7 @@ const TripletContainer = _styledComponents.default.div`
   margin: 0 auto;
   display: flex;
   max-width: 1100px;
+  font-size: 1.6rem;
   h2 {
   }
   @media screen and (max-width: 600px) {
@@ -54,7 +57,7 @@ const maybeLink = (link, Content) => {
   return _react.default.createElement(Content, null);
 };
 
-var _default = ({
+const Triplet = ({
   features
 }) => _react.default.createElement(TripletContainer, null, features.map(({
   image,
@@ -63,9 +66,15 @@ var _default = ({
   link,
   topTitle,
   width
-}) => _react.default.createElement(Feature, null, maybeLink(link, () => _react.default.createElement("div", null, topTitle && _react.default.createElement(Subtitle, null, title), _react.default.createElement("img", {
+}, idx) => _react.default.createElement(Feature, {
+  key: idx
+}, maybeLink(link, () => _react.default.createElement("div", null, topTitle && _react.default.createElement(Subtitle, null, title), _react.default.createElement("img", {
   src: image,
   width: width || 100
 }), !topTitle && _react.default.createElement(Subtitle, null, title), content && _react.default.createElement("p", null, content))))));
 
+Triplet.propTypes = {
+  features: _propTypes.default.arrayOf(_propTypes.default.object)
+};
+var _default = Triplet;
 exports.default = _default;

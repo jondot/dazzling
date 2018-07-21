@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import P from 'prop-types'
 
 class Button extends Component {
+  static propTypes = {
+    to: P.string,
+    children: P.node,
+    style: P.object
+  }
   render() {
     const { children, to, style } = this.props
     return (

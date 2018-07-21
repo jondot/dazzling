@@ -4,6 +4,7 @@ import Subtitle from '../subtitle'
 import Or from '../or'
 import BrandedLink from '../branded-link'
 import Button from '../button'
+import P from 'prop-types'
 
 const Hero = ({
   title,
@@ -23,9 +24,11 @@ const Hero = ({
       <Button to={primaryNavItem.to}>{primaryNavItem.primary}</Button>
     )}
     <Or>or</Or>
-    <BrandedLink href={secondaryNavItem.href} go>
-      {secondaryNavItem.secondary}
-    </BrandedLink>
+    {secondaryNavItem && (
+      <BrandedLink href={secondaryNavItem.href} go>
+        {secondaryNavItem.secondary}
+      </BrandedLink>
+    )}
   </HeroContainer>
 )
 
@@ -38,5 +41,14 @@ const HeroContainer = styled.div`
     margin: 0;
   }
 `
+Hero.propTypes = {
+  title: P.string,
+  subTitle: P.string,
+  logo: P.string,
+  primaryNavItem: P.object,
+  secondaryNavItem: P.object,
+  children: P.node,
+  logoWidth: P.number
+}
 
 export default Hero

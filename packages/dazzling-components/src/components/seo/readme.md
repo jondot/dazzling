@@ -1,0 +1,1 @@
+This component injects SEO content into your `<head/>` tag.

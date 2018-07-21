@@ -1,1 +1,5 @@
-{ "sections": ["Introduction", "Ecosystem", "Use Cases"]}
+{
+    "sections": [
+        "Introduction"
+    ]
+}
