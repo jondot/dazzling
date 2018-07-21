@@ -1,6 +1,6 @@
 {
   "name": "dazzling-components",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "lib/index.js",
   "repository": "https://github.com/jondot/dazzling",
   "license": "MIT",
@@ -82,5 +82,6 @@
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     }
-  }
+  },
+  "gitHead": "27128a8f124bcf494cfb75509465b87f74e8c6b3"
 }

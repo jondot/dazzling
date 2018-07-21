@@ -1,6 +1,6 @@
 {
   "name": "dazzling",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "index.js",
   "repository": "https://github.com/jondot/dazzling",
   "author": "Dotan Nahum <jondotan@gmail.com>",
@@ -20,5 +20,6 @@
     "jest": "^23.2.0",
     "puppeteer": "^1.5.0",
     "tree-kill": "^1.2.0"
-  }
+  },
+  "gitHead": "27128a8f124bcf494cfb75509465b87f74e8c6b3"
 }
