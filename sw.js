@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/app-d39450930a96820105f3.js","58b568182e0f3e36dd5359a57b89b5a5"],["/commons-33995916c180ac252a63.js","76222743b7c924d08785e2f54e1248ab"],["/index.html","13d6e2490a30f1f0fddd8e16ff155021"],["/manifest.webmanifest","336e6cc3dd80dafabd0bd8d18f933332"],["/offline-plugin-app-shell-fallback/index.html","34ead64d0de2df65e13df3ae52947124"]];
+var precacheConfig = [["/dazzling/app-c131fbfbd22148fd7c40.js","8a4e018a17324ee8219a629c616b1e49"],["/dazzling/commons-33995916c180ac252a63.js","756e4a9ee11d6c4cbad8f17f8665172e"],["/dazzling/index.html","82662e48399a832c095eb9aacda54c11"],["/dazzling/manifest.webmanifest","096c94bca33eebd217987691e30902fa"],["/dazzling/offline-plugin-app-shell-fallback/index.html","46113ac1b8ca6bdca814c0aa9072527e"]];
 var cacheName = 'sw-precache-v3-gatsby-plugin-offline-' + (self.registration ? self.registration.scope : '');
 
 
