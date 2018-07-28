@@ -1,36 +1,36 @@
 {
   "assetsByChunkName": {
     "path---react": [
-      "path---react-1e3b0b71a862d580a12c.js",
-      "path---react-1e3b0b71a862d580a12c.js.map"
+      "path---react-cdb31c0008bd8967d3de.js",
+      "path---react-cdb31c0008bd8967d3de.js.map"
     ],
     "component---src-templates-doc-jsx": [
-      "component---src-templates-doc-jsx-3abe77ea55371a4582b2.js",
-      "component---src-templates-doc-jsx-3abe77ea55371a4582b2.js.map"
+      "component---src-templates-doc-jsx-16aa852e39835968e700.js",
+      "component---src-templates-doc-jsx-16aa852e39835968e700.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
     ],
     "path---configuration": [
-      "path---configuration-064ae845abc70c06e017.js",
-      "path---configuration-064ae845abc70c06e017.js.map"
+      "path---configuration-ed8d0370c94c8b27bed7.js",
+      "path---configuration-ed8d0370c94c8b27bed7.js.map"
     ],
     "component---src-layouts-index-jsx": [
-      "component---src-layouts-index-jsx-8f3be56f2eb6955d2706.js",
-      "component---src-layouts-index-jsx-8f3be56f2eb6955d2706.js.map"
+      "component---src-layouts-index-jsx-fdae2d57893697c5b6ac.js",
+      "component---src-layouts-index-jsx-fdae2d57893697c5b6ac.js.map"
     ],
     "component---node-modules-gatsby-plugin-offline-app-shell-js": [
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---getting-started": [
-      "path---getting-started-bbe11701ab2df45b84f5.js",
-      "path---getting-started-bbe11701ab2df45b84f5.js.map"
+      "path---getting-started-626cc354a23a535f4cb5.js",
+      "path---getting-started-626cc354a23a535f4cb5.js.map"
     ],
     "path---docs": [
-      "path---docs-70936bda2d0d2b5de4bd.js",
-      "path---docs-70936bda2d0d2b5de4bd.js.map"
+      "path---docs-9859db44243adca72888.js",
+      "path---docs-9859db44243adca72888.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
@@ -45,13 +45,13 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-index-jsx": [
-      "component---src-pages-index-jsx-1e5434d665d20d30e9ee.js",
-      "component---src-pages-index-jsx-1e5434d665d20d30e9ee.js.map"
+      "component---src-pages-index-jsx-0947e5b666485552d54c.js",
+      "component---src-pages-index-jsx-0947e5b666485552d54c.js.map"
     ],
     "app": [
-      "app-94a9a186e946e8e0824e.js",
+      "app-d39450930a96820105f3.js",
       "build-js-styles.css",
-      "app-94a9a186e946e8e0824e.js.map",
+      "app-d39450930a96820105f3.js.map",
       "build-js-styles.css.map"
     ]
   }
