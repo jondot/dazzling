@@ -16,7 +16,9 @@ var _index = _interopRequireDefault(require("./index"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const history = (0, _history.createMemoryHistory)();
-(0, _react2.storiesOf)('Button', module).add('default', () => _react.default.createElement(_reactRouter.Router, {
-  history: history
-}, _react.default.createElement(_index.default, null, "Go")));
+var history = (0, _history.createMemoryHistory)();
+(0, _react2.storiesOf)('Button', module).add('default', function () {
+  return _react.default.createElement(_reactRouter.Router, {
+    history: history
+  }, _react.default.createElement(_index.default, null, "Go"));
+});

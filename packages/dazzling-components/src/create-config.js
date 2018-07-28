@@ -1,5 +1,6 @@
 module.exports = ({
   name,
+  pathPrefix,
   pitch,
   github,
   logo,
@@ -26,7 +27,7 @@ module.exports = ({
   siteTitleAlt: `${name} - ${pitch}`, // Alternative site title for SEO.
   siteLogo: '/logo-meta.png', // Logo used for SEO and manifest.
   siteUrl,
-  pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  pathPrefix: pathPrefix || '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: `${name} - ${pitch}`, // Website description used for RSS feeds/meta description tag.
   googleAnalyticsID,
   googleFonts: googleFonts || ['Source Sans Pro:300,400,700'],

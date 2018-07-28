@@ -5,4 +5,4 @@ flow-typed/
 storybook-static/
 *.log
 .tool-versions
-
+www/public/

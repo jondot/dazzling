@@ -9,7 +9,8 @@ import {
   Footer,
   Shell,
   Triplet,
-  Section
+  Section,
+  FeatureSection,
 } from 'dazzling-components'
 import c from '../../site-config'
 const config = withAssets(_ => require(`../assets/${_}`))(c)
@@ -17,6 +18,11 @@ const config = withAssets(_ => require(`../assets/${_}`))(c)
 export default class Index extends React.Component {
   render() {
     const primaryNavItem = config.nav.find(item => item.primary)
+    const featureSectionProps = {
+      style: { maxWidth: 1100, margin: '8rem auto' },
+      imageStyle: { borderRadius: 150 },
+      contentFlex: 0.5
+    }
     return (
       <div className="index-container">
         <Helmet title={config.siteTitle} />
@@ -25,11 +31,12 @@ export default class Index extends React.Component {
             <Navigation itemStyle={{ marginRight: 30 }} items={config.nav} />
             <HeroWrapper>
               <HeroContainer>
+                <img style={{ marginTop: '8rem' }} src={config.logo} width={180} />
                 <h1>{config.siteTitle}</h1>
-                <Subtitle style={{ margin: '0em 0 1em 0' }}>
+                <Subtitle style={{ margin: '0em 0 8em 0' }}>
                   {config.pitch}
                 </Subtitle>
-                <Shell dark style={{ margin: '0 auto 10rem auto' }}>
+                <Shell dark style={{ margin: '0 auto 4rem auto' }}>
                   <Shell.Cmd>$ yarn add -D dazzling</Shell.Cmd>
                   <Shell.Cmd>$ yarn dazzling site new</Shell.Cmd>
                   <Shell.Success>
@@ -59,11 +66,9 @@ export default class Index extends React.Component {
           </IndexHeadContainer>
           <BodyContainer>
             {config.features && (
-              <Inverted>
-                <Section title={config.featuresText}>
-                  <Triplet features={config.features} />
-                </Section>
-              </Inverted>
+              <Section title={config.featuresText}>
+                <Triplet features={config.features} />
+              </Section>
             )}
 
             {config.usedIn && (
@@ -75,7 +80,7 @@ export default class Index extends React.Component {
 
           </BodyContainer>
         </main>
-      </div>
+      </div >
     )
   }
 }
@@ -86,7 +91,8 @@ const HeroContainer = styled.div`
     font-weight: 300;
     font-size: 8rem;
     letter-spacing: -7px;
-    color: ${({ theme: { brand } }) => brand};
+    color: black;
+    margin: 0;
   }
 `
 const Alt = styled.a`
@@ -98,19 +104,24 @@ const Alt = styled.a`
 const Inverted = styled.div`
   background: ${({ theme: { brand } }) => brand};
   color: ${({ theme: { background } }) => background};
+  a {
+    color: ${({ theme: { background } }) => background};
+    text-decoration:underline;
+  }
+
   * h2,
   h1 {
-    color: ${({ theme: { background } }) => background};
-  }
-`
+          color: ${({ theme: { background } }) => background};
+      }
+    `
 const HeroWrapper = styled.div`
-  max-width: 700px;
-  margin: 0 auto;
-`
+      max-width: 700px;
+      margin: 0 auto;
+    `
 const IndexHeadContainer = styled.div`
-text-align: center;
+    text-align: center;
   background: ${({ theme: { background } }) => background};
   padding: ${props => props.theme.sitePadding};
-  border-bottom: 1px solid #f0f0f0;
-`
+        border-bottom: 1px solid #f0f0f0;
+      `
 const BodyContainer = styled.div``

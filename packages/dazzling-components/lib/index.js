@@ -69,6 +69,12 @@ Object.defineProperty(exports, "Triplet", {
     return _triplet.default;
   }
 });
+Object.defineProperty(exports, "FeatureSection", {
+  enumerable: true,
+  get: function get() {
+    return _featureSection.default;
+  }
+});
 Object.defineProperty(exports, "DocsHeader", {
   enumerable: true,
   get: function get() {
@@ -133,6 +139,8 @@ var _shell = _interopRequireDefault(require("./components/shell"));
 var _subtitle = _interopRequireDefault(require("./components/subtitle"));
 
 var _triplet = _interopRequireDefault(require("./components/triplet"));
+
+var _featureSection = _interopRequireDefault(require("./components/feature-section"));
 
 var _header = _interopRequireDefault(require("./docs/header"));
 

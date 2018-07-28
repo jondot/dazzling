@@ -9,14 +9,22 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-const imageFix = loader => f => _objectSpread({}, f, {
-  image: loader(f.image)
-});
+var imageFix = function imageFix(loader) {
+  return function (f) {
+    return _objectSpread({}, f, {
+      image: loader(f.image)
+    });
+  };
+};
 
-var _default = loader => config => _objectSpread({}, config, {
-  logo: loader(config.logo),
-  usedIn: config.usedIn.map(imageFix(loader)),
-  features: config.features.map(imageFix(loader))
-});
+var _default = function _default(loader) {
+  return function (config) {
+    return _objectSpread({}, config, {
+      logo: loader(config.logo),
+      usedIn: config.usedIn.map(imageFix(loader)),
+      features: config.features.map(imageFix(loader))
+    });
+  };
+};
 
 exports.default = _default;

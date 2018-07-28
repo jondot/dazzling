@@ -1,14 +1,21 @@
 {
-  plugins: ['inline-import-data-uri'],
+  plugins: ['inline-import-data-uri','@babel/proposal-class-properties'
+  ],
   presets: [
     '@babel/preset-flow',
     '@babel/preset-react',
-    ['@babel/preset-stage-0', { decoratorsLegacy: true }],
+    ['@babel/preset-stage-0',
+      { decoratorsLegacy: true
+      }
+    ],
     [
       '@babel/preset-env',
       {
         targets: {
-          node: 6
+          browsers: [
+            "last 2 versions",
+            "safari >= 7"
+          ]
         }
       }
     ]

@@ -52,3 +52,4 @@ Everything is standard React and standard Gatsby - feel free to edit, tweak and 
 
 You can look at the various components Dazzling has [by going to its styleguide]().
 
+Next, check out how Dazzling supports a markdown based [documentation feature](docs).

@@ -13,21 +13,34 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const Section = ({
-  title,
-  children
-}) => _react.default.createElement(SectionContainer, null, title && _react.default.createElement("h1", null, title), children);
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  border-bottom: 1px solid #f0f0f0;\n  padding: 4rem 0;\n  padding-bottom: 6rem;\n  text-align: center;\n  font-size: 1.6rem;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Section = function Section(_ref) {
+  var title = _ref.title,
+      children = _ref.children,
+      style = _ref.style;
+  return _react.default.createElement(SectionContainer, {
+    style: style
+  }, title && _react.default.createElement("h1", null, title), children);
+};
 
 Section.propTypes = {
   title: _propTypes.default.string,
-  children: _propTypes.default.node
+  children: _propTypes.default.node,
+  style: _propTypes.default.object
 };
-const SectionContainer = _styledComponents.default.section`
-  border-bottom: 1px solid #f0f0f0;
-  padding: 4rem 0;
-  padding-bottom: 6rem;
-  text-align: center;
-  font-size: 1.6rem;
-`;
+
+var SectionContainer = _styledComponents.default.section(_templateObject());
+
 var _default = Section;
 exports.default = _default;

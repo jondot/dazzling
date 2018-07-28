@@ -2,11 +2,12 @@ const createConfig = require('dazzling-components/lib/create-config')
 const github = 'https://github.com/jondot/dazzling'
 
 module.exports = createConfig({
+  pathPrefix: '/dazzling',
   name: 'Dazzling',
-  pitch: 'An open source all-in-one project website generator based on Gatsby.',
+  pitch: 'A sparkly website generator based on Gatsby.',
   github,
   logo: 'logo.svg',
-  siteUrl: 'http://www.dazzling.io',
+  siteUrl: 'http://jondot.github.io',
   googleAnalyticsID: 'UA-FIX-ME-XXXXX', // GA tracking ID.
 
   docsDir: `${__dirname}/../content`,
@@ -28,12 +29,12 @@ module.exports = createConfig({
     },
     {
       name: 'Docs',
-      to: 'getting-started',
+      to: '/getting-started',
       primary: 'Get Started'
     },
     { name: 'Github', secondary: 'Github', href: github }
   ],
-  usedInText: 'Powered by Dazzling',
+  usedInText: 'Made with Dazzling',
   usedIn: [
     {
       topTitle: true,
@@ -43,7 +44,6 @@ module.exports = createConfig({
       link: 'https://www.hygen.io'
     },
   ],
-  featuresText: 'Build Dazzling Sites',
   features: [
     {
       image: 'simple.svg',

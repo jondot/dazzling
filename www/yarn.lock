@@ -3166,13 +3166,13 @@ dateformat@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-2.2.0.tgz#4065e2013cf9fb916ddfd82efb506ad4c6769062"
 
-dazzling-components@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/dazzling-components/-/dazzling-components-1.0.5.tgz#d99415989f5de0516aae523c3081b78f7f14b945"
+dazzling-components@^1.0.13:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/dazzling-components/-/dazzling-components-1.0.13.tgz#501df4a731c3c3e0099300e28020ec974551463a"
   dependencies:
     gatsby-link "^1.6.45"
     lodash "^4.17.4"
-    lodash-webpack-plugin "^0.11.5"
+    polished "^1.9.3"
     prop-types "^15.6.2"
     react-helmet "^5.2.0"
     styled-components "^3.3.3"
@@ -6953,7 +6953,7 @@ lodash-id@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/lodash-id/-/lodash-id-0.14.0.tgz#baf48934e543a1b5d6346f8c84698b1a8c803896"
 
-lodash-webpack-plugin@^0.11.4, lodash-webpack-plugin@^0.11.5:
+lodash-webpack-plugin@^0.11.4:
   version "0.11.5"
   resolved "https://registry.yarnpkg.com/lodash-webpack-plugin/-/lodash-webpack-plugin-0.11.5.tgz#c4bd064b4f561c3f823fa5982bdeb12c475390b9"
   dependencies:
@@ -8513,6 +8513,10 @@ pngquant-bin@^3.0.0:
     bin-build "^2.0.0"
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
+
+polished@^1.9.3:
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-1.9.3.tgz#d61b8a0c4624efe31e2583ff24a358932b6b75e1"
 
 posix-character-classes@^0.1.0:
   version "0.1.1"

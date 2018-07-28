@@ -47,7 +47,7 @@ class TableOfContents extends React.Component {
                 <OffsetLi
                   selected={
                     this.props.location &&
-                    node.path === this.props.location.pathname
+                    this.props.location.pathname.match(node.path + '$')
                   }
                 >
                   <h6>{node.title}</h6>

@@ -9,6 +9,7 @@ export SEO from './components/seo'
 export Shell from './components/shell'
 export Subtitle from './components/subtitle'
 export Triplet from './components/triplet'
+export FeatureSection from './components/feature-section'
 
 export DocsHeader from './docs/header'
 export DocsTableOfContents from './docs/toc'
