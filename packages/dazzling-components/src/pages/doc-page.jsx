@@ -97,7 +97,7 @@ const BodyContainer = styled.div`
 `
 
 const HeaderContainer = styled.div`
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid ${({ theme: { borderColor } }) => borderColor};
   grid-column: 1 / 3;
   grid-row: 1 / 2;
   z-index: 2;
@@ -110,7 +110,7 @@ const ToCContainer = styled.div`
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   background: ${props => props.theme.inkLight};
-  border-right: 1px solid #f0f0f0;
+  border-right: 1px solid ${props => props.theme.borderColor};
   overflow: scroll;
   @media screen and (max-width: 600px) {
     order: 3;

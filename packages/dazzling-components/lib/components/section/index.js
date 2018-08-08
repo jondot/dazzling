@@ -14,7 +14,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  border-bottom: 1px solid #f0f0f0;\n  padding: 4rem 0;\n  padding-bottom: 6rem;\n  text-align: center;\n  font-size: 1.6rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  border-bottom: 1px solid ", ";\n  padding: 4rem 0;\n  padding-bottom: 6rem;\n  text-align: center;\n  font-size: 1.6rem;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -40,7 +40,10 @@ Section.propTypes = {
   style: _propTypes.default.object
 };
 
-var SectionContainer = _styledComponents.default.section(_templateObject());
+var SectionContainer = _styledComponents.default.section(_templateObject(), function (_ref2) {
+  var borderColor = _ref2.theme.borderColor;
+  return borderColor;
+});
 
 var _default = Section;
 exports.default = _default;

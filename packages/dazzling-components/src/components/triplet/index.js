@@ -45,18 +45,20 @@ const maybeLink = (link, Content) => {
 
 const Triplet = ({ features }) => (
   <TripletContainer>
-    {features.map(({ image, title, content, link, topTitle, width }, idx) => (
-      <Feature key={idx}>
-        {maybeLink(link, () => (
-          <div>
-            {topTitle && <Subtitle>{title}</Subtitle>}
-            <img src={image} width={width || 100} />
-            {!topTitle && <Subtitle>{title}</Subtitle>}
-            {content && <p>{content}</p>}
-          </div>
-        ))}
-      </Feature>
-    ))}
+    {features.map(
+      ({ image, title, content, link, topTitle, width, height }, idx) => (
+        <Feature key={idx}>
+          {maybeLink(link, () => (
+            <div>
+              {topTitle && <Subtitle>{title}</Subtitle>}
+              <img src={image} width={width || 100} height={height || 100} />
+              {!topTitle && <Subtitle>{title}</Subtitle>}
+              {content && <p>{content}</p>}
+            </div>
+          ))}
+        </Feature>
+      )
+    )}
   </TripletContainer>
 )
 

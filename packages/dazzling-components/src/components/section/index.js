@@ -15,7 +15,7 @@ Section.propTypes = {
 }
 
 const SectionContainer = styled.section`
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid ${({ theme: { borderColor } }) => borderColor};
   padding: 4rem 0;
   padding-bottom: 6rem;
   text-align: center;

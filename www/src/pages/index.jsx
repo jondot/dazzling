@@ -10,7 +10,6 @@ import {
   Shell,
   Triplet,
   Section,
-  FeatureSection,
 } from 'dazzling-components'
 import c from '../../site-config'
 const config = withAssets(_ => require(`../assets/${_}`))(c)
@@ -18,11 +17,6 @@ const config = withAssets(_ => require(`../assets/${_}`))(c)
 export default class Index extends React.Component {
   render() {
     const primaryNavItem = config.nav.find(item => item.primary)
-    const featureSectionProps = {
-      style: { maxWidth: 1100, margin: '8rem auto' },
-      imageStyle: { borderRadius: 150 },
-      contentFlex: 0.5
-    }
     return (
       <div className="index-container">
         <Helmet title={config.siteTitle} />
@@ -36,7 +30,7 @@ export default class Index extends React.Component {
                 <Subtitle style={{ margin: '0em 0 8em 0' }}>
                   {config.pitch}
                 </Subtitle>
-                <Shell dark style={{ margin: '0 auto 4rem auto' }}>
+                <Shell style={{ margin: '0 auto 4rem auto' }}>
                   <Shell.Cmd>$ yarn add -D dazzling</Shell.Cmd>
                   <Shell.Cmd>$ yarn dazzling site new</Shell.Cmd>
                   <Shell.Success>
@@ -66,8 +60,15 @@ export default class Index extends React.Component {
           </IndexHeadContainer>
           <BodyContainer>
             {config.features && (
-              <Section title={config.featuresText}>
+              <Section style={{ marginTop: '5rem' }} title={config.featuresText}>
                 <Triplet features={config.features} />
+
+                <Button
+                  style={{ borderRadius: 4, padding: '1.5rem 3rem' }}
+                  to={primaryNavItem.to}
+                >
+                  {primaryNavItem.primary}
+                </Button>
               </Section>
             )}
 
@@ -76,7 +77,7 @@ export default class Index extends React.Component {
                 <Triplet features={config.usedIn} />
               </Section>
             )}
-            <Footer theme={{ background: '#555', ink: '#fff' }} nav={config.nav} name={config.name} />
+            <Footer style={{ marginTop: '6rem', borderTop: '' }} theme={{ background: '#555', ink: '#fff' }} nav={config.nav} name={config.name} />
 
           </BodyContainer>
         </main>
@@ -91,7 +92,7 @@ const HeroContainer = styled.div`
     font-weight: 300;
     font-size: 8rem;
     letter-spacing: -7px;
-    color: black;
+    color: ${({ theme: { brand } }) => brand};
     margin: 0;
   }
 `
@@ -101,27 +102,14 @@ const Alt = styled.a`
   border-bottom: 1px solid;
 `
 
-const Inverted = styled.div`
-  background: ${({ theme: { brand } }) => brand};
-  color: ${({ theme: { background } }) => background};
-  a {
-    color: ${({ theme: { background } }) => background};
-    text-decoration:underline;
-  }
-
-  * h2,
-  h1 {
-          color: ${({ theme: { background } }) => background};
-      }
-    `
 const HeroWrapper = styled.div`
-      max-width: 700px;
-      margin: 0 auto;
-    `
+  max-width: 700px;
+  margin: 0 auto;
+`
 const IndexHeadContainer = styled.div`
-    text-align: center;
+  text-align: center;
   background: ${({ theme: { background } }) => background};
   padding: ${props => props.theme.sitePadding};
-        border-bottom: 1px solid #f0f0f0;
-      `
+  border-bottom: 1px solid #fff;
+`
 const BodyContainer = styled.div``

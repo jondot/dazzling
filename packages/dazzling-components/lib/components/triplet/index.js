@@ -80,13 +80,15 @@ var Triplet = function Triplet(_ref2) {
         content = _ref3.content,
         link = _ref3.link,
         topTitle = _ref3.topTitle,
-        width = _ref3.width;
+        width = _ref3.width,
+        height = _ref3.height;
     return _react.default.createElement(Feature, {
       key: idx
     }, maybeLink(link, function () {
       return _react.default.createElement("div", null, topTitle && _react.default.createElement(Subtitle, null, title), _react.default.createElement("img", {
         src: image,
-        width: width || 100
+        width: width || 100,
+        height: height || 100
       }), !topTitle && _react.default.createElement(Subtitle, null, title), content && _react.default.createElement("p", null, content));
     }));
   }));

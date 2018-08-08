@@ -48,7 +48,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  grid-column: 1 / 2;\n  grid-row: 2 / 3;\n  background: ", ";\n  border-right: 1px solid #f0f0f0;\n  overflow: scroll;\n  @media screen and (max-width: 600px) {\n    order: 3;\n    overflow: inherit;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  grid-column: 1 / 2;\n  grid-row: 2 / 3;\n  background: ", ";\n  border-right: 1px solid ", ";\n  overflow: scroll;\n  @media screen and (max-width: 600px) {\n    order: 3;\n    overflow: inherit;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -58,7 +58,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  border-bottom: 1px solid #f0f0f0;\n  grid-column: 1 / 3;\n  grid-row: 1 / 2;\n  z-index: 2;\n  @media screen and (max-width: 600px) {\n    order: 1;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  border-bottom: 1px solid ", ";\n  grid-column: 1 / 3;\n  grid-row: 1 / 2;\n  z-index: 2;\n  @media screen and (max-width: 600px) {\n    order: 1;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -179,19 +179,24 @@ var BodyContainer = _styledComponents.default.div(_templateObject2(), function (
   return props.theme.inkDark;
 });
 
-var HeaderContainer = _styledComponents.default.div(_templateObject3());
+var HeaderContainer = _styledComponents.default.div(_templateObject3(), function (_ref) {
+  var borderColor = _ref.theme.borderColor;
+  return borderColor;
+});
 
 var ToCContainer = _styledComponents.default.div(_templateObject4(), function (props) {
   return props.theme.inkLight;
+}, function (props) {
+  return props.theme.borderColor;
 });
 
 var LogoBar = _styledComponents.default.div(_templateObject5());
 
-var LogoHeader = _styledComponents.default.div(_templateObject6(), function (_ref) {
-  var brand = _ref.theme.brand;
+var LogoHeader = _styledComponents.default.div(_templateObject6(), function (_ref2) {
+  var brand = _ref2.theme.brand;
   return brand;
-}, function (_ref2) {
-  var titleFontFamily = _ref2.theme.titleFontFamily;
+}, function (_ref3) {
+  var titleFontFamily = _ref3.theme.titleFontFamily;
   return titleFontFamily;
 });
 

@@ -4,7 +4,7 @@ const github = 'https://github.com/jondot/dazzling'
 module.exports = createConfig({
   pathPrefix: '/dazzling',
   name: 'Dazzling',
-  pitch: 'A sparkly website generator based on Gatsby.',
+  pitch: 'A sparkly website generator.',
   github,
   logo: 'logo.svg',
   siteUrl: 'http://jondot.github.io',
@@ -46,22 +46,25 @@ module.exports = createConfig({
   ],
   features: [
     {
-      image: 'simple.svg',
-      title: 'Unlimited Creativity.',
+      image: 'battery.svg',
+      width: 54,
+      title: 'Batteries Included.',
       content:
-        'Build with Dazzling components or make new ones with React and Styled Components.'
+        'Touch and go. A Dazzling website with documentation takes a single command.'
     },
     {
-      image: 'scalable.svg',
-      title: 'Full Automation.',
+      image: 'extensible.svg',
+      width: 90,
+      title: 'Simple Extensibility.',
       content:
-        'Generate, install, and go. Even exports your logo from the included Sketch file.'
+        'Use the Dazzling component library to tweak, change, and add pages.'
     },
     {
-      image: 'fast.svg',
-      title: 'Gatsby at the Core.',
+      image: 'react.svg',
+      width: 120,
+      title: 'React at The Core',
       content:
-        'Dazzling grows with you. Use anything from the amazing Gatsby ecosystem.'
+        'Dazzling is Gatsby powered, and uses React and Styled Components.'
     }
   ],
   copyright: 'Copyright © 2018. Dotan Nahum',
@@ -69,12 +72,13 @@ module.exports = createConfig({
     // named colors:
     titleFontFamily: 'Muli',
     background: '#fff',
-    brand: '#408AFA',
+    brand: '#EF0D0D',
     brandSecondary: '#8b8f94',
+    borderColor: '#fff',
     ink: '#333',
     inkDark: '#35495E',
-    inkLight: '#f9fbfd',
-    inkSelected: '#2097e4',
+    inkLight: '#fff',
+    inkSelected: '#EF0D0D',
     // content width:
     contentWidthLaptop: '680px',
     sitePadding: '20px'
