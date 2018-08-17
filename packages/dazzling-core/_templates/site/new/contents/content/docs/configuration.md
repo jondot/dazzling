@@ -6,7 +6,7 @@ category: "tech"
 type: "doc"
 ---
 
-Dazzling places your website configuration in `site-config.js`. This is where you personalize all asprects of the Dazzling website, without taking advantage of building new features in React (we'll get to that!).
+Dazzling places your website configuration in `site-config.js`. This is where you personalize all aspects of the Dazzling website, without taking advantage of building new features in React (we'll get to that!).
 
 In other words, if you want something quick, you can edit `site-config.js` and be done with it.
 
@@ -80,6 +80,6 @@ module.exports = createConfig({
 })
 ```
 
-We recommend experimenting with these settings and if any doubt, take a look [at the source]()
+We recommend experimenting with these settings and if any doubt, take a look [at the source](https://github.com/jondot/dazzling/blob/master/packages/dazzling-components/src/create-config.js)
 
-The next step for customizing your website would be to [take advantage of React and Gatsby](react).
+If you want to set up documentation for your site (it's on by default) check out [Docs](docs).

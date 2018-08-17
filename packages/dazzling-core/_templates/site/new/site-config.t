@@ -30,7 +30,7 @@ module.exports = createConfig({
     },
     {
       name: 'Docs',
-      to: 'getting-started',
+      to: 'configuration',
       primary: 'Get Started'
     },
     { name: 'Github', secondary: 'Github', href: github }
@@ -83,6 +83,7 @@ module.exports = createConfig({
   theme: {
     // named colors:
     background: '#fff',
+    borderColor: '#f0f0f0',
     brand: '#F722B1',
     brandSecondary: '#8b8f94',
     ink: '#3a5975',

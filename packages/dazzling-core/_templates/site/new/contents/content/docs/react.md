@@ -50,5 +50,5 @@ If you noticed - both the folder structure and the actual pages are super compac
 
 Everything is standard React and standard Gatsby - feel free to edit, tweak and use the parts you like from Dazzling and ignore the parts you dislike.
 
-You can look at the various components Dazzling has [by going to its styleguide]().
+You can look at the components Dazzling has [by going to the components package](https://github.com/jondot/dazzling/tree/master/packages/dazzling-components/src/components).
 
