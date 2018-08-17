@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/*"
+    ]
+  },
+  "scripts": {
+    "version": "node scripts/sync-version.js"
+  },
+  "devDependencies": {
+    "lerna": "3.0.0-beta.21"
+  }
+}

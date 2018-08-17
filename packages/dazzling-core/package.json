@@ -1,0 +1,25 @@
+{
+  "name": "dazzling",
+  "version": "1.0.20",
+  "main": "index.js",
+  "repository": "https://github.com/jondot/dazzling",
+  "author": "Dotan Nahum <jondotan@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "dazzling": "./bin.js"
+  },
+  "dependencies": {
+    "hygen": "^1.6.2"
+  },
+  "jest": {
+    "testRegex": "src/__tests__/.*\\.spec\\.js$"
+  },
+  "devDependencies": {
+    "execa": "^0.10.0",
+    "fs-extra": "^6.0.1",
+    "jest": "^23.2.0",
+    "puppeteer": "^1.5.0",
+    "tree-kill": "^1.2.0"
+  },
+  "gitHead": "27128a8f124bcf494cfb75509465b87f74e8c6b3"
+}
