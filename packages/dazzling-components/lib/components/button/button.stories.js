@@ -4,10 +4,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _react2 = require("@storybook/react");
 
-var _addonActions = require("@storybook/addon-actions");
-
-var _addonLinks = require("@storybook/addon-links");
-
 var _history = require("history");
 
 var _reactRouter = require("react-router");

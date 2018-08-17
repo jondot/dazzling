@@ -75,7 +75,7 @@ module.exports = createConfig({
     brand: '#EF0D0D',
     brandSecondary: '#8b8f94',
     borderColor: '#fff',
-    ink: '#333',
+    ink: '#111',
     inkDark: '#35495E',
     inkLight: '#fff',
     inkSelected: '#EF0D0D',
